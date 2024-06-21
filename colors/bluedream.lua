@@ -1,5 +1,5 @@
 -- You probably always want to set this in your vim file
-vim.opt.background = "#212e2d"
+vim.opt.background = "dark"
 vim.g.colors_name = "bluedream"
 -- By setting our module to nil, we clear lua's cache,
 -- which means the require ahead will *always* occur.
