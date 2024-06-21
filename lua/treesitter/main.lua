@@ -1,6 +1,6 @@
-local main = require("lua.main")
+local main = require("main")
 local lush = require("lush")
-local colors = require("lua.colors.colors")
+local colors = require("colors.colors")
 
 ---@diagnostic disable: undefined-global
 

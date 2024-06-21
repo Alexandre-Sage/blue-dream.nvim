@@ -1,6 +1,6 @@
 local lush = require("lush")
 ---@diagnostic disable: undefined-global
-local colors = require("lua.colors.colors")
+local colors = require("colors.colors")
 --local configs = require("lua.configs.configs")
 local main = lush(function(f)
 	return {

@@ -1,7 +1,7 @@
-local main = require("lua.main")
-local neogit = require("lua.git.neogit")
+local main = require("main")
+local neogit = require("git.neogit")
 local lush = require("lush")
-local colors = require("lua.colors.colors")
+local colors = require("colors.colors")
 
 ---@diagnostic disable: undefined-global
 

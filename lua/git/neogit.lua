@@ -1,6 +1,6 @@
 local lush = require("lush")
-local main = require("lua.main")
-local colors = require("lua.colors.colors")
+local main = require("main")
+local colors = require("colors.colors")
 ---@diagnostic disable: undefined-global
 
 local spec = lush.extends({ main }).with(function()
