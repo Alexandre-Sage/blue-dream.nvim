@@ -2,16 +2,16 @@ local main = require("main")
 local neogit = require("git.neogit")
 local lush = require("lush")
 local colors = require("colors.colors")
-
+local flog = require("git.flog")
 ---@diagnostic disable: undefined-global
 
-local spec = lush.extends({ main, neogit }).with(function()
-	return {
-		-- DiffAdd        (), -- Diff mode: Added line |diff.txt|
-		-- DiffChange     (), -- Diff mode: Changed line |diff.txt|
-		-- DiffDelete     (), -- Diff mode: Deleted line |diff.txt|
-		-- DiffText       (), -- Diff mode: Changed text within a changed line |diff.txt|
-	}
+local spec = lush.extends({ main, neogit, flog }).with(function()
+  return {
+    DiffAdd(colors.diff_add), -- Diff mode: Added line |diff.txt|
+    DiffChange(colors.diff_change), -- Diff mode: Changed line |diff.txt|
+    DiffDelete(colors.diff_delete), -- Diff mode: Deleted line |diff.txt|
+    DiffText(colors.diff_change), -- Diff mode: Changed text within a changed line |diff.txt|
+  }
 end)
 
 return spec
