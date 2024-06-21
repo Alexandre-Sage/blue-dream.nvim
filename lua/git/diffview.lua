@@ -9,6 +9,7 @@ local spec = lush.extends({ main }).with(function()
     DiffViewChange(colors.surf_green_fg),
     DiffViewAdd(colors.surf_green_fg),
     DiffViewDelete(colors.purple_fg),
+    DiffViewEndOfBuffer(colors.yellow_fg),
   }
 end)
 

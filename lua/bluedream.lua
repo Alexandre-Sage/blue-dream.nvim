@@ -4,9 +4,9 @@ local treesitter_theme = require("treesitter.main")
 local git = require("git.main")
 
 local theme = lush.merge({
-	treesitter_theme,
-	base,
-	git,
+  treesitter_theme,
+  base,
+  git,
 })
 
 return theme
