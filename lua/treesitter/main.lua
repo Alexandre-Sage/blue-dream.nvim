@@ -7,7 +7,7 @@ local colors = require("colors.colors")
 local spec = lush.extends({ main }).with(function(injected_functions)
 	local sym = injected_functions.sym
 	return {
-		sym("@keyword")(colors.purple_fg),
+		--sym("@keyword")(colors.purple_fg),
 		sym("@keyword.coroutine")(colors.blue2_fg),
 		sym("@keyword.function")(colors.purple_fg),
 		sym("@keyword.operator")(colors.purple_fg),
