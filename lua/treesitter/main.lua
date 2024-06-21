@@ -66,7 +66,7 @@ local spec = lush.extends({ main }).with(function(injected_functions)
 		-- sym"@text.underline"    (), -- Underlined
 		-- sym"@text.todo"         (), -- Todo
 		-- sym"@comment"           (), -- Comment
-		sym("@punctuation")(colors.yellow_fg), -- De
+		sym("@punctuation")(colors.blue2_fg), -- De
 		-- sym"@label"             (), -- Label
 		-- sym"@preproc"           (), -- PreProc
 		sym("@tag")(colors.yellow_fg), -- Tag
