@@ -8,7 +8,7 @@ local spec = lush.extends({ main }).with(function()
     --------------- STATUS BUFFER ---------------
     NeogitBranch(colors.surf_green_fg), --        Local branches
     NeogitBranchHead(colors.blue1_fg), --        Accent highlight for current HEAD in LogBuffer
-    -- NeogitRemote        ()  , --        Remote branches
+    NeogitRemote(colors.yellow_fg), --        Remote branches
     NeogitObjectId(colors.grey_fg), --        Object's SHA hash
     -- NeogitStash         ()  , --        Stash name
     NeogitFold(colors.blue2_fg), --        Folded text highlight
@@ -20,8 +20,8 @@ local spec = lush.extends({ main }).with(function()
     -- STATUS BUFFER SECTION HEADERS
     NeogitSectionHeader(colors.purple_fg),
     NeogitUnpushedTo(colors.yellow_fg), -- Linked to NeogitSectionHeader
-    -- NeogitUnmergedInto       (), -- ^
-    -- NeogitUnpulledFrom       (), -- ^
+    NeogitUnmergedInto(colors.yellow_fg), -- ^
+    NeogitUnpulledFrom(colors.yellow_fg), -- ^
     NeogitUntrackedfiles(colors.orange_fg), -- ^
     -- NeogitUnstagedchanges    (), -- ^
     -- NeogitUnmergedchanges    (), -- ^
@@ -101,16 +101,16 @@ local spec = lush.extends({ main }).with(function()
     --                           (), --  emphasis (but less emphasis than BranchName)
     --                           (), --
     NeogitPopupSwitchKey(colors.surf_green_fg), --  Applied to the key that will toggle switch
-    -- NeogitPopupSwitchEnabled  (), --  Applied to the flag if enabled
-    -- NeogitPopupSwitchDisabled (), --  Applied to the flag if disabled
+    NeogitPopupSwitchEnabled(colors.yellow_fg), --  Applied to the flag if enabled
+    NeogitPopupSwitchDisabled(colors.grey_fg), --  Applied to the flag if disabled
     --                           (), --
     NeogitPopupOptionKey(colors.surf_green_fg), --  Applied to the key that will trigger option
-    NeogitPopupOptionEnabled(colors.blue1_fg), --  Applied if option is set
+    NeogitPopupOptionEnabled(colors.yellow_fg), --  Applied if option is set
     NeogitPopupOptionDisabled(colors.grey_fg), --  Applied if option has no value
     --                           (), --
     NeogitPopupConfigKey(colors.surf_green_fg), --  Applied to the key that triggers config
-    -- NeogitPopupConfigEnabled  (), --  Applied to enabled config value
-    -- NeogitPopupConfigDisabled (), --  Applied to config without value
+    NeogitPopupConfigEnabled(colors.yellow_fg), --  Applied to enabled config value
+    NeogitPopupConfigDisabled(colors.grey_fg), --  Applied to config without value
     --                           (), --
     NeogitPopupActionKey(colors.yellow_fg), --  Applied to key that triggers function
     NeogitPopupActionDisabled(colors.grey_fg), --  Applied to key when function is unimplemented
