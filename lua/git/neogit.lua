@@ -95,35 +95,35 @@ local spec = lush.extends({ main }).with(function()
     -- NeogitSignatureGoodRevokedKey(),
     --
     -- POPUPS
-    -- NeogitPopupSectionTitle   (), Applied to all section headers
-    -- NeogitPopupBranchName     (), Applied to the current branch name for emphasis
-    -- NeogitPopupBold           (), Applied on "@{upstream}" and "pushRemote" for
-    --                           (), emphasis (but less emphasis than BranchName)
-    --                           (),
-    -- NeogitPopupSwitchKey      (), Applied to the key that will toggle switch
-    -- NeogitPopupSwitchEnabled  (), Applied to the flag if enabled
-    -- NeogitPopupSwitchDisabled (), Applied to the flag if disabled
-    --                           (),
-    -- NeogitPopupOptionKey      (), Applied to the key that will trigger option
-    -- NeogitPopupOptionEnabled  (), Applied if option is set
-    -- NeogitPopupOptionDisabled (), Applied if option has no value
-    --                           (),
-    -- NeogitPopupConfigKey      (), Applied to the key that triggers config
-    -- NeogitPopupConfigEnabled  (), Applied to enabled config value
-    -- NeogitPopupConfigDisabled (), Applied to config without value
-    --                           (),
-    -- NeogitPopupActionKey      (), Applied to key that triggers function
-    -- NeogitPopupActionDisabled (), Applied to key when function is unimplemented
-    --                           (),
-    -- COMMAND HISTORY BUFFER    (),
-    -- NeogitCommandText         (), Git command that was run
-    -- NeogitCommandTime         (), Execution time
-    -- NeogitCommandCodeNormal   (), Applied to a successful command's exit status (0)
-    -- NeogitCommandCodeError    (), When command exits with non-zero status
-    --                           (),
-    -- COMMIT SELECT BUFFER      (),
-    -- NeogitFloatHeader         (), Foreground/Background for header text at top of win
-    -- NeogitFloatHeaderHighlight(), Emphasized text in header
+    NeogitPopupSectionTitle(colors.purple_fg), -- Applied to all section headers
+    NeogitPopupBranchName(colors.surf_green_fg), --  Applied to the current branch name for emphasis
+    -- NeogitPopupBold           (), --  Applied on "@{upstream}" and "pushRemote" for
+    --                           (), --  emphasis (but less emphasis than BranchName)
+    --                           (), --
+    NeogitPopupSwitchKey(colors.surf_green_fg), --  Applied to the key that will toggle switch
+    -- NeogitPopupSwitchEnabled  (), --  Applied to the flag if enabled
+    -- NeogitPopupSwitchDisabled (), --  Applied to the flag if disabled
+    --                           (), --
+    NeogitPopupOptionKey(colors.surf_green_fg), --  Applied to the key that will trigger option
+    NeogitPopupOptionEnabled(colors.blue1_fg), --  Applied if option is set
+    NeogitPopupOptionDisabled(colors.grey_fg), --  Applied if option has no value
+    --                           (), --
+    NeogitPopupConfigKey(colors.surf_green_fg), --  Applied to the key that triggers config
+    -- NeogitPopupConfigEnabled  (), --  Applied to enabled config value
+    -- NeogitPopupConfigDisabled (), --  Applied to config without value
+    --                           (), --
+    NeogitPopupActionKey(colors.yellow_fg), --  Applied to key that triggers function
+    NeogitPopupActionDisabled(colors.grey_fg), --  Applied to key when function is unimplemented
+    --                           (), --
+    -- COMMAND HISTORY BUFFER    (), --
+    -- NeogitCommandText         (), --  Git command that was run
+    -- NeogitCommandTime         (), --  Execution time
+    -- NeogitCommandCodeNormal   (), --  Applied to a successful command's exit status (0)
+    -- NeogitCommandCodeError    (), --  When command exits with non-zero status
+    --                           (), --
+    -- COMMIT SELECT BUFFER      (), --
+    NeogitFloatHeader(colors.yellow_fg), --  Foreground/Background for header text at top of win
+    NeogitFloatHeaderHighlight(colors.blue2_fg), --  Emphasized text in header
   }
 end)
 
